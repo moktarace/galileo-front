@@ -5,8 +5,8 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import "./styles.css";
-import SubjectCaroussel from "./component/schedule-caroussel";
-import subjects from "./service/databse";
+import LevelList from "./component/level-list";
+import level from "./service/databse";
 
 
 class App extends React.Component<any, any> {
@@ -32,14 +32,10 @@ class App extends React.Component<any, any> {
     public render() {
 
         return (
-            <div className="">
-                <SubjectCaroussel
-                    id={subjects[0].id}
-                    name={subjects[0].name}
-                    description={subjects[0].description}
-                    skills={subjects[0].skills}>
-                </SubjectCaroussel>
-            </div >
+            <div>
+                <LevelList id={level.id} description={level.description}
+                    name={level.name} subjects={level.subjects}></LevelList>
+            </div>
         );
     }
 }

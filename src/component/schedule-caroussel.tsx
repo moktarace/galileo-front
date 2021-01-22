@@ -1,7 +1,4 @@
 import * as React from "react";
-import { render } from "react-dom";
-import { Card } from 'primereact/card';
-import { Skeleton } from 'primereact/skeleton';
 import { Skill } from "../model/skill";
 import { Subject } from "../model/subject";
 import { Carousel } from "primereact/carousel";
@@ -39,14 +36,17 @@ class SubjectCaroussel extends React.Component<Subject, Subject> {
 
     public render() {
         return (
-            <Carousel
-                responsiveOptions={responsiveOptions}
-                numVisible={3}
-                numScroll={1}
-                circular={true}
-                value={this.state.skills}
-                itemTemplate={(skill: Skill) => <SkillCard id={skill.id} name={skill.name} description={skill.description} premium={skill.premium}></SkillCard>}
-            ></Carousel>
+            <div className="card">
+                <h5>{this.state.name}</h5>
+                <Carousel
+                    responsiveOptions={responsiveOptions}
+                    numVisible={3}
+                    numScroll={1}
+                    circular={true}
+                    value={this.state.skills}
+                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} name={skill.name} description={skill.description} exercices={skill.exercices} premium={skill.premium}></SkillCard>}
+                ></Carousel>
+            </div>
         );
     }
 }
