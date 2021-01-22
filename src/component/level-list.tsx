@@ -13,9 +13,9 @@ class LevelList extends React.Component<Level, any> {
 
     public render() {
         return (
-            <div className="p-mr-2 card p-mb-2">
-                <h5>{this.props.name}</h5>
-                <h6>{this.props.description}</h6>
+            <div className="p-mr-2 p-p-3 p-mb-2">
+                <h1>{this.props.name}</h1>
+                <p>{this.props.description}</p>
                 <div className="">
                     {
                         this.props.subjects.map(s => <SubjectCaroussel

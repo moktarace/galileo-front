@@ -15,9 +15,9 @@ class SkillList extends React.Component<Skill, any> {
 
     public render() {
         return (
-            <div className="p-mr-2 card p-mb-2">
-                <h5>{this.props.name}</h5>
-                <h6>{this.props.description}</h6>
+            <div className="p-mr-2 p-mb-2">
+                <h1>{this.props.name}</h1>
+                <p>{this.props.description}</p>
                 <h6>Exercices</h6>
                 <ListBox optionLabel="name" optionValue="id" options={this.props.exercices} onChange={(e) => console.log(e.value)} />
                 <h6>Tests</h6>

@@ -5,8 +5,8 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+import 'primereact/resources/themes/saga-blue/theme.css';
 import 'primereact/resources/primereact.min.css';
-import 'primereact/resources/themes/arya-blue/theme.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import "./styles.css";
@@ -26,7 +26,7 @@ class App extends React.Component<any, any> {
     public render() {
         return (
             <Router>
-                <div className="container layout-wrapper">
+                <div className="p-component">
                     <div className="p-mr-2">
                         <Switch>
                             <Route path="/skill/:id">
@@ -39,7 +39,6 @@ class App extends React.Component<any, any> {
                     </div>
                 </div>
             </Router>
-
         );
     }
 }

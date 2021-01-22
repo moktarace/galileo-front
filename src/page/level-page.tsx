@@ -13,12 +13,10 @@ class LevelPage extends React.Component<any, any> {
 
     public render() {
         return (
-
-            <div className="p-grid">
-                <div className="p-col">
-                    <LevelList id={level.id} description={level.description}
-                        name={level.name} subjects={level.subjects}></LevelList>
-                </div>
+            <div className="card">
+                <h2>Parcours d'entrainement</h2>
+                <LevelList id={level.id} description={level.description}
+                    name={level.name} subjects={level.subjects}></LevelList>
             </div>
         );
     }

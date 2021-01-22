@@ -13,7 +13,8 @@ class SkillPage extends React.Component<any, any> {
 
     public render() {
         return (
-            <div className="p-mb-2">
+            <div className="card">
+                <h2>{level.subjects[0].skills[0].name}</h2>
                 <SkillList tests={level.subjects[0].skills[0].tests} premium={false} id={level.subjects[0].skills[0].id} description={level.subjects[0].skills[0].description}
                     name={level.subjects[0].skills[0].name} exercices={level.subjects[0].skills[0].exercices}></SkillList>
             </div>
