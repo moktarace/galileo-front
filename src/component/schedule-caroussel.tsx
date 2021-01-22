@@ -22,11 +22,7 @@ const responsiveOptions = [
         numScroll: 1
     }
 ];
-class SubjectCaroussel extends React.Component<Subject, Subject> {
-    constructor(props: Subject) {
-        super(props);
-        this.state = props;
-    }
+class SubjectCaroussel extends React.Component<Subject, any> {
 
     public componentDidMount() {
     }
@@ -37,14 +33,14 @@ class SubjectCaroussel extends React.Component<Subject, Subject> {
     public render() {
         return (
             <div className="card">
-                <h5>{this.state.name}</h5>
+                <h5>{this.props.name}</h5>
                 <Carousel
                     responsiveOptions={responsiveOptions}
                     numVisible={3}
                     numScroll={1}
                     circular={true}
-                    value={this.state.skills}
-                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} name={skill.name} description={skill.description} exercices={skill.exercices} premium={skill.premium}></SkillCard>}
+                    value={this.props.skills}
+                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} tests={skill.tests} name={skill.name} description={skill.description} exercices={skill.exercices} premium={skill.premium}></SkillCard>}
                 ></Carousel>
             </div>
         );

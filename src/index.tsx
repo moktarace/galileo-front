@@ -1,12 +1,17 @@
 import * as React from "react";
 import { render } from "react-dom";
-import 'primereact/resources/themes/arya-orange/theme.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
 import 'primereact/resources/primereact.min.css';
+import 'primereact/resources/themes/arya-blue/theme.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import "./styles.css";
-import LevelList from "./component/level-list";
-import level from "./service/databse";
+import LevelPage from "./page/level-page";
+import SkillPage from "./page/skill-page";
 
 
 class App extends React.Component<any, any> {
@@ -17,25 +22,24 @@ class App extends React.Component<any, any> {
     public componentDidUpdate() {
     }
 
-    public handleQuoteChange(event: any) {
-        this.setState({
-            quote: event.target.value
-        });
-    }
-
-    public handleAnswerChange(event: any) {
-        this.setState({
-            answer: event.target.value
-        });
-    }
 
     public render() {
-
         return (
-            <div>
-                <LevelList id={level.id} description={level.description}
-                    name={level.name} subjects={level.subjects}></LevelList>
-            </div>
+            <Router>
+                <div className="container layout-wrapper">
+                    <div className="p-mr-2">
+                        <Switch>
+                            <Route path="/skill/:id">
+                                <SkillPage />
+                            </Route>
+                            <Route path="/">
+                                <LevelPage />
+                            </Route>
+                        </Switch>
+                    </div>
+                </div>
+            </Router>
+
         );
     }
 }

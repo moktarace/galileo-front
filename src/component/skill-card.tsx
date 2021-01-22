@@ -2,13 +2,10 @@ import * as React from "react";
 import { Card } from 'primereact/card';
 import { Skeleton } from 'primereact/skeleton';
 import { Skill } from "../model/skill";
+import { Link } from "react-router-dom";
 
 
-class SkillCard extends React.Component<Skill, Skill> {
-    constructor(props: Skill) {
-        super(props);
-        this.state = props;
-    }
+class SkillCard extends React.Component<Skill, any> {
 
     public componentDidMount() {
     }
@@ -17,7 +14,7 @@ class SkillCard extends React.Component<Skill, Skill> {
     }
 
     public render() {
-        if (!this.state.id) {
+        if (!this.props.id) {
             return (
                 <Card className="p-mr-2 p-mb-2">
                     <p><Skeleton shape="rectangle" /></p>
@@ -26,9 +23,12 @@ class SkillCard extends React.Component<Skill, Skill> {
             )
         }
         return (
-            <Card className="p-mr-2 p-mb-2" title={this.state.name}>
-                {this.state.description}
-            </Card>
+            <Link to={`/skill/${this.props.id}`}>
+                <Card className="p-mr-2 p-mb-2" title={this.props.name}>
+                    {this.props.description}
+                </Card>
+            </Link>
+
         );
     }
 }

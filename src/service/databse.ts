@@ -6,21 +6,23 @@ const level: Level = {
     description: "Bientôt le bac maggle",
     subjects: [
         {
-            id: "",
+            id: "math",
             name: "Math",
             description: "Pas facile les math",
             skills: [
-                { id: "test", name: "Trigonometrie", description: "Trigonometrie", premium: false, exercices: [{ id: "", name: "", description: "", question: "", tip: "", answer: "" }] },
-                { id: "test", name: "Integrale", description: "Integrale", premium: false, exercices: [{ id: "", name: "", description: "", question: "", tip: "", answer: "" }] },
+                { id: "math1", name: "Trigonometrie", description: "Trigonometrie", premium: false, exercices: [{ id: "math1exo1", name: "", description: "", question: "", tip: "", answer: "" }], tests: [] },
+                { id: "math2", name: "Integrale", description: "Integrale", premium: false, exercices: [{ id: "math2exo1", name: "", description: "", question: "", tip: "", answer: "" }], tests: [] },
+                { id: "math3", name: "Des maths", description: "Encore", premium: false, exercices: [{ id: "math3exo1", name: "", description: "", question: "", tip: "", answer: "" }], tests: [] },
+
             ]
         },
         {
-            id: "",
+            id: "physique",
             name: "Physique",
             description: "La Physique c'est pas mieux",
             skills: [
-                { id: "test", name: "Labo", description: "Labo", premium: false, exercices: [{ id: "", name: "", description: "", question: "", tip: "", answer: "" }] },
-                { id: "test", name: "Truc de physique", description: "Truc de physique", premium: false, exercices: [{ id: "", name: "", description: "", question: "", tip: "", answer: "" }] }
+                { id: "physique1", name: "Labo", description: "Labo", premium: false, exercices: [{ id: "physique1exo1", name: "", description: "", question: "", tip: "", answer: "" }], tests: [] },
+                { id: "physique2", name: "Truc de physique", description: "Truc de physique", premium: false, exercices: [{ id: "physique2exo1", name: "", description: "", question: "", tip: "", answer: "" }], tests: [] }
             ]
         },
     ]
