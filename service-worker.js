@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/galileo-front/precache-manifest.cd7ce766a862e35a234025e44a678046.js"
+  "/galileo-front/precache-manifest.2b9e9d61aee66d378f0b137050897e6a.js"
 );
 
 self.addEventListener('message', (event) => {
