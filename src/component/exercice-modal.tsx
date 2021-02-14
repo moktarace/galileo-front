@@ -29,13 +29,15 @@ class ExericeModal extends React.Component<ExericeModalProps, any> {
     }
 
     public getNbStep() {
-        return this.props.exercice.questions.length - 1;
+        return Math.max(this.props.exercice.questions.length - 1, 1);
     }
 
     public getQuestion() {
         let result = this.props.exercice.questions[0];
         for (let i = 1; i <= this.state.step; i += 1) {
-            result += '<li>' + this.props.exercice.questions[i]
+            if (this.props.exercice.questions[i]) {
+                result += '<li>' + this.props.exercice.questions[i]
+            }
         }
         return result;
     }
