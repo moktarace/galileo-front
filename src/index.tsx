@@ -10,29 +10,53 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import "./styles.css";
+import { ProgressSpinner } from 'primereact/progressspinner';
 import LevelPage from "./page/level-page";
 import SkillPage from "./page/skill-page";
-import StartPageModel from "./page/start-page";
 import DatabaseService from "./service/database-service";
 
+class AppState {
+    constructor(public databaseLoaded: boolean = false) { }
+}
+class App extends React.Component<any, AppState> {
 
-class App extends React.Component<any, any> {
+    private database: DatabaseService;
+
+    constructor(prop: any) {
+        super(prop);
+        this.state = {
+            databaseLoaded: false
+        };
+        this.database = new DatabaseService();
+    }
+
+
+    public componentDidMount() {
+        this.database.isCreated().then(value => {
+            if (!value) {
+                this.database.initialize().then(() => this.setState({ databaseLoaded: true }));
+            } else {
+                this.setState({ databaseLoaded: true });
+            }
+        });
+    }
 
     public render() {
-        var database: DatabaseService = new DatabaseService();
+        if (!this.state.databaseLoaded) {
+            return (
+                <div className="card"><ProgressSpinner /></div>
+            );
+        }
         return (
             <Router>
                 <div className="p-component">
                     <div className="p-mr-2">
                         <Switch>
                             <Route path="/skill/:id">
-                                <SkillPage database={database} />
-                            </Route>
-                            <Route path="/level">
-                                <LevelPage database={database} />
+                                <SkillPage database={this.database} />
                             </Route>
                             <Route path="/">
-                                <StartPageModel database={database} />
+                                <LevelPage database={this.database} />
                             </Route>
                         </Switch>
                     </div>
