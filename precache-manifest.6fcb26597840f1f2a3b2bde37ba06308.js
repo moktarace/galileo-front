@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c9ed41437d64e19080177b3d7a60f201",
+    "revision": "c8a5bd63589dfa38e27b1f28b9cc4962",
     "url": "/galileo-front/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/galileo-front/static/css/2.ff0eeaad.chunk.css"
   },
   {
-    "revision": "df840cc97f4a5303b8d5",
+    "revision": "cec2bd7b3454484c2b9c",
     "url": "/galileo-front/static/css/main.fab45d46.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/galileo-front/static/js/2.326c974e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df840cc97f4a5303b8d5",
-    "url": "/galileo-front/static/js/main.8fb85be3.chunk.js"
+    "revision": "cec2bd7b3454484c2b9c",
+    "url": "/galileo-front/static/js/main.6302163a.chunk.js"
   },
   {
     "revision": "f8c9184794618147bf36",
