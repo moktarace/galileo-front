@@ -13,7 +13,8 @@ class ExericeModal extends React.Component<ExericeModalProps, any> {
     constructor(prop: ExericeModalProps) {
         super(prop);
         this.state = {
-            visible: false,
+            started: false,
+            step: 1,
             done: false,
             time: 0,
             success: false
@@ -24,7 +25,23 @@ class ExericeModal extends React.Component<ExericeModalProps, any> {
         if (this.state.done) {
             return this.props.exercice.answer;
         }
-        return this.props.exercice.question;
+        return this.getQuestion();
+    }
+
+    public getNbStep() {
+        return this.props.exercice.questions.length - 1;
+    }
+
+    public getQuestion() {
+        let result = this.props.exercice.questions[0];
+        for (let i = 1; i <= this.state.step; i += 1) {
+            result += '<li>' + this.props.exercice.questions[i]
+        }
+        return result;
+    }
+
+    public getResponses() {
+        return ["Reponse A", "Reponse B", "Reponse C", "Reponse D"]
     }
 
     public finish() {
@@ -43,26 +60,37 @@ class ExericeModal extends React.Component<ExericeModalProps, any> {
 
     public start() {
         this.setState({
-            visible: !this.state.visible,
+            started: true,
             time: Date.now()
         })
     }
 
+    public nextStep() {
+        if (this.state.step === this.getNbStep()) {
+            this.finish();
+        } else {
+            this.setState({
+                step: this.state.step + 1
+            });
+        }
+    }
 
     public close() {
         this.setState({
             done: false,
-            visible: !this.state.visible
+            step: 1,
+            started: false
         })
     }
 
     public getFooter() {
         if (!this.state.done) {
             return <div>
-                <Button label="Reponse A" onClick={() => this.finish()} className="p-button-text" />
-                <Button label="Reponse B" onClick={() => this.finish()} className="p-button-text" />
-                <Button label="Reponse C" onClick={() => this.finish()} className="p-button-text" />
-                <Button label="Reponse D" onClick={() => this.finish()} className="p-button-text" />
+                {
+                    this.getResponses().map((value, index) =>
+                        <Button key={index} label={value} onClick={() => this.nextStep()} className="p-button-text" />
+                    )
+                }
             </div>
         }
         return <div>
@@ -74,7 +102,7 @@ class ExericeModal extends React.Component<ExericeModalProps, any> {
         return (
             <div className="card">
                 <Button label={this.props.exercice.name} icon="pi pi-external-link" onClick={() => this.start()} />
-                <Dialog header={this.props.exercice.name} visible={this.state.visible} style={{ width: '50vw' }} footer={this.getFooter()} onHide={() => this.close()}>
+                <Dialog header={this.props.exercice.name} visible={this.state.started} style={{ width: '50vw' }} footer={this.getFooter()} onHide={() => this.close()}>
                     <Latex>{this.getContent()}</Latex>
                 </Dialog>
             </div >

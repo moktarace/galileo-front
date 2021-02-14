@@ -5,11 +5,13 @@ export class Exercice {
     skill_id!: string;
     name!: string;
     description!: string;
-    question: string;
+    enonce: string;
+    questions: string[];
     tip!: string;
     answer!: string;
 
     constructor() {
-        this.question = "";
+        this.enonce = "";
+        this.questions = [];
     }
 }

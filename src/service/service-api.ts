@@ -11,6 +11,7 @@ class ServiceAPI {
             fetch(URL)
                 .then(response => response.json())
                 .then(json => {
+                    var regexp = new RegExp('<li>');
                     var subjects: Map<number, Subject> = new Map();
                     json.map((value: any) => {
                         if (!subjects.has(value.chapitre[0].ID)) {
@@ -28,7 +29,8 @@ class ServiceAPI {
                                 skill_id: value.id,
                                 name: exo.post_title,
                                 description: "",
-                                question: exo.enonce,
+                                enonce: exo.enonce,
+                                questions: exo.enonce.split(regexp),
                                 answer: exo.correction,
                                 tip: "demerde-toi"
                             })

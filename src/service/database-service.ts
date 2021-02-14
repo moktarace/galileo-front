@@ -18,10 +18,10 @@ class DatabaseService {
         this.db = new Dexie(DatabaseService.DB_NAME);
         this.db.version(1).stores({
             subjects: 'id',
-            skills: 'id, subject_id, premium, order, difficulty',
-            exercices: 'id, skill_id',
-            questions: 'id, exercice_id',
-            results: '++id, date, exercice_id, time, success',
+            skills: 'id',
+            exercices: 'id',
+            questions: 'id',
+            results: 'id',
         });
     }
 
@@ -52,7 +52,7 @@ class DatabaseService {
                 subjects.forEach(s => {
                     this.db.table("skills").bulkPut(s.skills)
                     s.skills.forEach(skill => {
-                        //this.db.table("exercices").bulkAdd(skill.exercices);
+                        this.db.table("exercices").bulkPut(skill.exercices);
                     })
                 })
                 this.db.table("subjects").bulkPut(subjects);

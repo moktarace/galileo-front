@@ -32,13 +32,15 @@ class App extends React.Component<any, AppState> {
 
 
     public componentDidMount() {
-        this.database.isCreated().then(value => {
+        /*this.database.isCreated().then(value => {
             if (!value) {
                 this.database.initialize().then(() => this.setState({ databaseLoaded: true }));
             } else {
                 this.setState({ databaseLoaded: true });
             }
-        });
+        });*/
+        this.database.initialize().then(() => this.setState({ databaseLoaded: true }));
+
     }
 
     public render() {

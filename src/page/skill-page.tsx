@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Skill } from "../model/skill";
-import { Panel } from 'primereact/panel';
 import ExericeModal from "../component/exercice-modal";
-import YouTube, { Options } from 'react-youtube';
+import YouTube from 'react-youtube';
 import DatabaseService from "../service/database-service";
 import { Result } from "../model/result";
+import { Divider } from 'primereact/divider';
 
 class SkillPageProp {
     constructor(public database: DatabaseService) { }
@@ -45,31 +45,25 @@ class SkillPage extends React.Component<SkillPageProp, SkillPageModel> {
     }
 
     public addResult(result: Result) {
-        this.props.database.addResult(result).then(value => console.log(value));
+        this.props.database.addResult(result);
     }
 
     public render() {
-        const opts: Options = {
-            height: '390',
-            width: '640',
-            playerVars: {
-                playsinline: 1,
-                autoplay: 0,
-            },
-        };
         return (
             <div className="card">
                 <h2>{this.state.skill?.name}</h2>
-                <Panel header="Cours">
+                <div className="p-d-flex">
+                    <YouTube
+                        videoId={this.getVideoId(this.state.skill.video)}
+                    />
+
+                    <Divider layout="vertical" />
                     <div
                         dangerouslySetInnerHTML={{
                             __html: this.state.skill.description
                         }}></div>
-                    <YouTube
-                        opts={opts}
-                        videoId={this.getVideoId(this.state.skill.video)}
-                    />
-                </Panel>
+                </div>
+                <h2>Exercice</h2>
                 {
                     this.state.skill.exercices.map((exo, value) =>
                         <ExericeModal key={value} exercice={exo} onFinish={(result: Result) => (this.addResult(result))} />
