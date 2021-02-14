@@ -1,11 +1,20 @@
 import { Exercice } from "./exercice";
-import { Test } from "./test";
 
 export class Skill {
-    id!: string;
-    name!: string;
-    description!: string;
-    premium!: boolean;
-    exercices!: Exercice[];
-    tests!: Test[];
+    id: string;
+    name: string;
+    description: string;
+    premium?: boolean;
+    exercices: Exercice[];
+    image?: string;
+    order?: string;
+    difficulty?: number;
+    video?: string;
+
+    constructor() {
+        this.name = "";
+        this.id = "";
+        this.description = "";
+        this.exercices = [];
+    }
 }

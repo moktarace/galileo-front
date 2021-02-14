@@ -1,8 +1,9 @@
-import { Test } from "./test";
+import { Exercice } from "./exercice";
 
 export class Result {
     id!: string;
-    valid!: boolean;
+    success!: boolean;
+    date!: number;
     time!: number;
-    test!: Test;
+    exercice!: Exercice;
 }

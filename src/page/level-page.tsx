@@ -1,22 +1,34 @@
 import * as React from "react";
 import LevelList from "../component/level-list";
-import level from "../service/databse";
+import { Subject } from "../model/subject";
+import ServiceAPI from "../service/service-api";
 
+class LevelPageModel {
+    constructor(public subjects: Subject[] = []) { }
+}
+class LevelPage extends React.Component<any, LevelPageModel> {
 
-class LevelPage extends React.Component<any, any> {
-
-    public componentDidMount() {
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            subjects: []
+        };
     }
 
-    public componentDidUpdate() {
+    public componentDidMount() {
+        new ServiceAPI().getSubject().then((subjects: Subject[]) =>
+            this.setState({
+                subjects
+            })
+        );
     }
 
     public render() {
         return (
             <div className="card">
-                <h2>Parcours d'entrainement</h2>
-                <LevelList id={level.id} description={level.description}
-                    name={level.name} subjects={level.subjects}></LevelList>
+                <h2>POC</h2>
+                <LevelList id="0" description=""
+                    name="Première" subjects={this.state.subjects}></LevelList>
             </div>
         );
     }

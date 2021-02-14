@@ -24,12 +24,6 @@ const responsiveOptions = [
 ];
 class SubjectCaroussel extends React.Component<Subject, any> {
 
-    public componentDidMount() {
-    }
-
-    public componentDidUpdate() {
-    }
-
     public render() {
         return (
             <div className="card">
@@ -40,7 +34,7 @@ class SubjectCaroussel extends React.Component<Subject, any> {
                     numScroll={1}
                     circular={true}
                     value={this.props.skills}
-                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} tests={skill.tests} name={skill.name} description={skill.description} exercices={skill.exercices} premium={skill.premium}></SkillCard>}
+                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} name={skill.name} description={skill.description} exercices={skill.exercices} image={skill.image} premium={skill.premium}></SkillCard>}
                 ></Carousel>
             </div>
         );

@@ -7,12 +7,6 @@ import { Link } from "react-router-dom";
 
 class SkillCard extends React.Component<Skill, any> {
 
-    public componentDidMount() {
-    }
-
-    public componentDidUpdate() {
-    }
-
     public render() {
         if (!this.props.id) {
             return (
@@ -24,8 +18,9 @@ class SkillCard extends React.Component<Skill, any> {
         }
         return (
             <Link to={`/skill/${this.props.id}`}>
-                <Card className="p-mr-2 p-mb-2" title={this.props.name}>
-                    {this.props.description}
+                <Card className="p-mr-2 p-mb-2"
+                    header={<img alt="Card" src={this.props.image} />}
+                    title={this.props.name}>
                 </Card>
             </Link>
 

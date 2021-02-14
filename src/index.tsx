@@ -16,13 +16,6 @@ import SkillPage from "./page/skill-page";
 
 class App extends React.Component<any, any> {
 
-    public componentDidMount() {
-    }
-
-    public componentDidUpdate() {
-    }
-
-
     public render() {
         return (
             <Router>
