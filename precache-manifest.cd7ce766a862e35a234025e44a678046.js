@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f4dd2e1f5a8a10391454faeb9bd7ed49",
+    "revision": "99d05ac44a69b9dbc79cba740fa84866",
     "url": "/galileo-front/index.html"
   },
   {
-    "revision": "2ea31a6297c0483c2613",
+    "revision": "5fd8eef2368a85956bbd",
     "url": "/galileo-front/static/css/2.ff0eeaad.chunk.css"
   },
   {
-    "revision": "97a5ba7e2f1c3adfd6e7",
+    "revision": "cfc43e23b1ca66813f59",
     "url": "/galileo-front/static/css/main.fab45d46.chunk.css"
   },
   {
-    "revision": "2ea31a6297c0483c2613",
-    "url": "/galileo-front/static/js/2.693c02c6.chunk.js"
+    "revision": "5fd8eef2368a85956bbd",
+    "url": "/galileo-front/static/js/2.6b3f4f28.chunk.js"
   },
   {
-    "revision": "245b5c6674b11cd59b37f20688426791",
-    "url": "/galileo-front/static/js/2.693c02c6.chunk.js.LICENSE.txt"
+    "revision": "eb0c94df0e2a6e281de2b537b603edc0",
+    "url": "/galileo-front/static/js/2.6b3f4f28.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "97a5ba7e2f1c3adfd6e7",
-    "url": "/galileo-front/static/js/main.be067fb3.chunk.js"
+    "revision": "cfc43e23b1ca66813f59",
+    "url": "/galileo-front/static/js/main.0acfaf04.chunk.js"
   },
   {
     "revision": "f8c9184794618147bf36",
