@@ -3,6 +3,7 @@ import { Skill } from "../model/skill";
 import { Panel } from 'primereact/panel';
 import ServiceAPI from "../service/service-api";
 import ExericeModal from "../component/exercice-modal";
+import YouTube from 'react-youtube';
 
 class SkillPageModel {
     constructor(public skill: Skill) { }
@@ -33,6 +34,13 @@ class SkillPage extends React.Component<any, SkillPageModel> {
         });
     }
 
+    public getVideoId(link?: string) {
+        if (link) {
+            return link.split('/').pop();
+        }
+        return '';
+    }
+
     public render() {
         return (
             <div className="card">
@@ -42,8 +50,9 @@ class SkillPage extends React.Component<any, SkillPageModel> {
                         dangerouslySetInnerHTML={{
                             __html: this.state.skill.description
                         }}></div>
-                    <iframe id="ytplayer" width="640" height="360"
-                        src={this.state.skill.video} />
+                    <YouTube
+                        videoId={this.getVideoId(this.state.skill.video)}
+                    />
                 </Panel>
                 {
                     this.state.skill.exercices.map((exo, value) =>
