@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/galileo-front/static/css/main.fab45d46.chunk.css",
-    "main.js": "/galileo-front/static/js/main.6302163a.chunk.js",
-    "main.js.map": "/galileo-front/static/js/main.6302163a.chunk.js.map",
+    "main.js": "/galileo-front/static/js/main.be067fb3.chunk.js",
+    "main.js.map": "/galileo-front/static/js/main.be067fb3.chunk.js.map",
     "runtime-main.js": "/galileo-front/static/js/runtime-main.e708d8b1.js",
     "runtime-main.js.map": "/galileo-front/static/js/runtime-main.e708d8b1.js.map",
     "static/css/2.ff0eeaad.chunk.css": "/galileo-front/static/css/2.ff0eeaad.chunk.css",
-    "static/js/2.326c974e.chunk.js": "/galileo-front/static/js/2.326c974e.chunk.js",
-    "static/js/2.326c974e.chunk.js.map": "/galileo-front/static/js/2.326c974e.chunk.js.map",
+    "static/js/2.693c02c6.chunk.js": "/galileo-front/static/js/2.693c02c6.chunk.js",
+    "static/js/2.693c02c6.chunk.js.map": "/galileo-front/static/js/2.693c02c6.chunk.js.map",
     "index.html": "/galileo-front/index.html",
-    "precache-manifest.6fcb26597840f1f2a3b2bde37ba06308.js": "/galileo-front/precache-manifest.6fcb26597840f1f2a3b2bde37ba06308.js",
+    "precache-manifest.2b59d04ce967422efbbed60bf9e7f25a.js": "/galileo-front/precache-manifest.2b59d04ce967422efbbed60bf9e7f25a.js",
     "service-worker.js": "/galileo-front/service-worker.js",
     "static/css/2.ff0eeaad.chunk.css.map": "/galileo-front/static/css/2.ff0eeaad.chunk.css.map",
     "static/css/main.fab45d46.chunk.css.map": "/galileo-front/static/css/main.fab45d46.chunk.css.map",
-    "static/js/2.326c974e.chunk.js.LICENSE.txt": "/galileo-front/static/js/2.326c974e.chunk.js.LICENSE.txt",
+    "static/js/2.693c02c6.chunk.js.LICENSE.txt": "/galileo-front/static/js/2.693c02c6.chunk.js.LICENSE.txt",
     "static/media/katex.min.css": "/galileo-front/static/media/KaTeX_Typewriter-Regular.6cc31ea5.woff2",
     "static/media/primereact.min.css": "/galileo-front/static/media/color.c7a33805.png",
     "static/media/primeicons.css": "/galileo-front/static/media/primeicons.b0f5d02f.eot"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.e708d8b1.js",
     "static/css/2.ff0eeaad.chunk.css",
-    "static/js/2.326c974e.chunk.js",
+    "static/js/2.693c02c6.chunk.js",
     "static/css/main.fab45d46.chunk.css",
-    "static/js/main.6302163a.chunk.js"
+    "static/js/main.be067fb3.chunk.js"
   ]
 }
