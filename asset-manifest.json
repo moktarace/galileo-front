@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/galileo-front/static/css/main.fab45d46.chunk.css",
-    "main.js": "/galileo-front/static/js/main.d7a7fc16.chunk.js",
-    "main.js.map": "/galileo-front/static/js/main.d7a7fc16.chunk.js.map",
+    "main.js": "/galileo-front/static/js/main.682bf8cc.chunk.js",
+    "main.js.map": "/galileo-front/static/js/main.682bf8cc.chunk.js.map",
     "runtime-main.js": "/galileo-front/static/js/runtime-main.e708d8b1.js",
     "runtime-main.js.map": "/galileo-front/static/js/runtime-main.e708d8b1.js.map",
     "static/css/2.ff0eeaad.chunk.css": "/galileo-front/static/css/2.ff0eeaad.chunk.css",
     "static/js/2.aa971619.chunk.js": "/galileo-front/static/js/2.aa971619.chunk.js",
     "static/js/2.aa971619.chunk.js.map": "/galileo-front/static/js/2.aa971619.chunk.js.map",
     "index.html": "/galileo-front/index.html",
-    "precache-manifest.2b9e9d61aee66d378f0b137050897e6a.js": "/galileo-front/precache-manifest.2b9e9d61aee66d378f0b137050897e6a.js",
+    "precache-manifest.5b4d2725f3e63bf2b36ce9a66e18dea8.js": "/galileo-front/precache-manifest.5b4d2725f3e63bf2b36ce9a66e18dea8.js",
     "service-worker.js": "/galileo-front/service-worker.js",
     "static/css/2.ff0eeaad.chunk.css.map": "/galileo-front/static/css/2.ff0eeaad.chunk.css.map",
     "static/css/main.fab45d46.chunk.css.map": "/galileo-front/static/css/main.fab45d46.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.ff0eeaad.chunk.css",
     "static/js/2.aa971619.chunk.js",
     "static/css/main.fab45d46.chunk.css",
-    "static/js/main.d7a7fc16.chunk.js"
+    "static/js/main.682bf8cc.chunk.js"
   ]
 }
