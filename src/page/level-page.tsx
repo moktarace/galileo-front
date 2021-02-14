@@ -1,12 +1,15 @@
 import * as React from "react";
 import LevelList from "../component/level-list";
 import { Subject } from "../model/subject";
-import ServiceAPI from "../service/service-api";
+import DatabaseService from "../service/database-service";
 
+class LevelPageProp {
+    constructor(public database: DatabaseService) { }
+}
 class LevelPageModel {
     constructor(public subjects: Subject[] = []) { }
 }
-class LevelPage extends React.Component<any, LevelPageModel> {
+class LevelPage extends React.Component<LevelPageProp, LevelPageModel> {
 
     constructor(props: any) {
         super(props);
@@ -16,11 +19,11 @@ class LevelPage extends React.Component<any, LevelPageModel> {
     }
 
     public componentDidMount() {
-        new ServiceAPI().getSubject().then((subjects: Subject[]) =>
+        this.props.database.getSubjects().then((subjects: Subject[]) => {
             this.setState({
                 subjects
             })
-        );
+        });
     }
 
     public render() {

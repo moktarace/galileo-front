@@ -34,7 +34,7 @@ class SubjectCaroussel extends React.Component<Subject, any> {
                     numScroll={1}
                     circular={true}
                     value={this.props.skills}
-                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} name={skill.name} description={skill.description} exercices={skill.exercices} image={skill.image} premium={skill.premium}></SkillCard>}
+                    itemTemplate={(skill: Skill) => <SkillCard id={skill.id} subject_id={skill.subject_id} name={skill.name} description={skill.description} exercices={skill.exercices} image={skill.image} premium={skill.premium}></SkillCard>}
                 ></Carousel>
             </div>
         );

@@ -4,11 +4,13 @@ import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import 'katex/dist/katex.min.css'
 import Latex from 'react-latex-next'
-import ServiceAPI from "../service/service-api";
 
-class ExericeModal extends React.Component<Exercice, any> {
+class ExericeModalProps {
+    constructor(public exercice: Exercice, public onFinish: Function) { }
+}
+class ExericeModal extends React.Component<ExericeModalProps, any> {
 
-    constructor(prop: Exercice) {
+    constructor(prop: ExericeModalProps) {
         super(prop);
         this.state = {
             visible: false,
@@ -20,17 +22,17 @@ class ExericeModal extends React.Component<Exercice, any> {
 
     public getContent() {
         if (this.state.done) {
-            return this.props.answer;
+            return this.props.exercice.answer;
         }
-        return this.props.question;
+        return this.props.exercice.question;
     }
 
     public finish() {
-        new ServiceAPI().saveResult({
-            id: Date.now().toString(),
+        this.props.onFinish({
+            id: Date.now(),
             success: true,
             date: Date.now(),
-            exercice: this.props,
+            exercice_id: this.props.exercice.id,
             time: Date.now() - this.state.time
         });
         this.setState({
@@ -71,8 +73,8 @@ class ExericeModal extends React.Component<Exercice, any> {
     public render() {
         return (
             <div className="card">
-                <Button label={this.props.name} icon="pi pi-external-link" onClick={() => this.start()} />
-                <Dialog header={this.props.name} visible={this.state.visible} style={{ width: '50vw' }} footer={this.getFooter()} onHide={() => this.close()}>
+                <Button label={this.props.exercice.name} icon="pi pi-external-link" onClick={() => this.start()} />
+                <Dialog header={this.props.exercice.name} visible={this.state.visible} style={{ width: '50vw' }} footer={this.getFooter()} onHide={() => this.close()}>
                     <Latex>{this.getContent()}</Latex>
                 </Dialog>
             </div >

@@ -1,9 +1,9 @@
 import { Exercice } from "./exercice";
 
 export class Result {
-    id!: string;
+    id!: number;
     success!: boolean;
     date!: number;
     time!: number;
-    exercice!: Exercice;
+    exercice_id!: string;
 }

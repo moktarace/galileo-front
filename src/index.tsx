@@ -12,21 +12,27 @@ import 'primeflex/primeflex.css';
 import "./styles.css";
 import LevelPage from "./page/level-page";
 import SkillPage from "./page/skill-page";
+import StartPageModel from "./page/start-page";
+import DatabaseService from "./service/database-service";
 
 
 class App extends React.Component<any, any> {
 
     public render() {
+        var database: DatabaseService = new DatabaseService();
         return (
             <Router>
                 <div className="p-component">
                     <div className="p-mr-2">
                         <Switch>
                             <Route path="/skill/:id">
-                                <SkillPage />
+                                <SkillPage database={database} />
+                            </Route>
+                            <Route path="/level">
+                                <LevelPage database={database} />
                             </Route>
                             <Route path="/">
-                                <LevelPage />
+                                <StartPageModel database={database} />
                             </Route>
                         </Switch>
                     </div>
