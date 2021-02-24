@@ -18,7 +18,7 @@ class DatabaseService {
         this.db = new Dexie(DatabaseService.DB_NAME);
         this.db.version(1).stores({
             subjects: 'id',
-            skills: 'id',
+            skills: 'id, subject_id',
             exercices: 'id',
             questions: 'id',
             results: 'id',
@@ -35,6 +35,14 @@ class DatabaseService {
 
     public getSubjects(): Promise<Subject[]> {
         return this.db.table("subjects").toArray();
+    }
+
+    public getRecommandedSkills(skill: Skill): Promise<Skill[]> {
+        return this.db.table("skills")
+            .where({ subject_id: skill.subject_id })
+            .filter(s => s.id !== skill.id)
+            .limit(3)
+            .toArray();
     }
 
     public getSkill(id: number): Promise<Skill> {
