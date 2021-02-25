@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3588539f913e0278be5ea24a68a23058",
+    "revision": "83f146c025535c2a4a6d44dbf9471a1e",
     "url": "/galileo-front/index.html"
   },
   {
-    "revision": "5cacd66364838b805877",
-    "url": "/galileo-front/static/css/2.ff0eeaad.chunk.css"
+    "revision": "274ab271dfee7d2f6a95",
+    "url": "/galileo-front/static/css/2.9c2e438b.chunk.css"
   },
   {
-    "revision": "b1af1d3e88d51df67499",
+    "revision": "40a01ef26b35b6b9ec47",
     "url": "/galileo-front/static/css/main.fab45d46.chunk.css"
   },
   {
-    "revision": "5cacd66364838b805877",
-    "url": "/galileo-front/static/js/2.aa971619.chunk.js"
+    "revision": "274ab271dfee7d2f6a95",
+    "url": "/galileo-front/static/js/2.9050431d.chunk.js"
   },
   {
-    "revision": "eb0c94df0e2a6e281de2b537b603edc0",
-    "url": "/galileo-front/static/js/2.aa971619.chunk.js.LICENSE.txt"
+    "revision": "245b5c6674b11cd59b37f20688426791",
+    "url": "/galileo-front/static/js/2.9050431d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b1af1d3e88d51df67499",
-    "url": "/galileo-front/static/js/main.682bf8cc.chunk.js"
+    "revision": "40a01ef26b35b6b9ec47",
+    "url": "/galileo-front/static/js/main.49ab2771.chunk.js"
   },
   {
     "revision": "f8c9184794618147bf36",
@@ -266,25 +266,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6cc31ea5c223c88705a13727a71417fa",
     "url": "/galileo-front/static/media/KaTeX_Typewriter-Regular.6cc31ea5.woff2"
-  },
-  {
-    "revision": "c7a33805ffda0d32bd2a9904c8b02750",
-    "url": "/galileo-front/static/media/color.c7a33805.png"
-  },
-  {
-    "revision": "121254f73060bcbb53ca13258dbd134f",
-    "url": "/galileo-front/static/media/primeicons.121254f7.ttf"
-  },
-  {
-    "revision": "25954ab5e32c01d577dcafd035597f5d",
-    "url": "/galileo-front/static/media/primeicons.25954ab5.svg"
-  },
-  {
-    "revision": "3b6e3706f42d8876fe364ab4d75683fd",
-    "url": "/galileo-front/static/media/primeicons.3b6e3706.woff"
-  },
-  {
-    "revision": "b0f5d02f4e70967dcc8162e938484366",
-    "url": "/galileo-front/static/media/primeicons.b0f5d02f.eot"
   }
 ]);

@@ -1,28 +1,26 @@
 {
   "files": {
     "main.css": "/galileo-front/static/css/main.fab45d46.chunk.css",
-    "main.js": "/galileo-front/static/js/main.682bf8cc.chunk.js",
-    "main.js.map": "/galileo-front/static/js/main.682bf8cc.chunk.js.map",
+    "main.js": "/galileo-front/static/js/main.49ab2771.chunk.js",
+    "main.js.map": "/galileo-front/static/js/main.49ab2771.chunk.js.map",
     "runtime-main.js": "/galileo-front/static/js/runtime-main.e708d8b1.js",
     "runtime-main.js.map": "/galileo-front/static/js/runtime-main.e708d8b1.js.map",
-    "static/css/2.ff0eeaad.chunk.css": "/galileo-front/static/css/2.ff0eeaad.chunk.css",
-    "static/js/2.aa971619.chunk.js": "/galileo-front/static/js/2.aa971619.chunk.js",
-    "static/js/2.aa971619.chunk.js.map": "/galileo-front/static/js/2.aa971619.chunk.js.map",
+    "static/css/2.9c2e438b.chunk.css": "/galileo-front/static/css/2.9c2e438b.chunk.css",
+    "static/js/2.9050431d.chunk.js": "/galileo-front/static/js/2.9050431d.chunk.js",
+    "static/js/2.9050431d.chunk.js.map": "/galileo-front/static/js/2.9050431d.chunk.js.map",
     "index.html": "/galileo-front/index.html",
-    "precache-manifest.5b4d2725f3e63bf2b36ce9a66e18dea8.js": "/galileo-front/precache-manifest.5b4d2725f3e63bf2b36ce9a66e18dea8.js",
+    "precache-manifest.eb0d3c18b8654db55527913b269202e1.js": "/galileo-front/precache-manifest.eb0d3c18b8654db55527913b269202e1.js",
     "service-worker.js": "/galileo-front/service-worker.js",
-    "static/css/2.ff0eeaad.chunk.css.map": "/galileo-front/static/css/2.ff0eeaad.chunk.css.map",
+    "static/css/2.9c2e438b.chunk.css.map": "/galileo-front/static/css/2.9c2e438b.chunk.css.map",
     "static/css/main.fab45d46.chunk.css.map": "/galileo-front/static/css/main.fab45d46.chunk.css.map",
-    "static/js/2.aa971619.chunk.js.LICENSE.txt": "/galileo-front/static/js/2.aa971619.chunk.js.LICENSE.txt",
-    "static/media/katex.min.css": "/galileo-front/static/media/KaTeX_Typewriter-Regular.6cc31ea5.woff2",
-    "static/media/primereact.min.css": "/galileo-front/static/media/color.c7a33805.png",
-    "static/media/primeicons.css": "/galileo-front/static/media/primeicons.b0f5d02f.eot"
+    "static/js/2.9050431d.chunk.js.LICENSE.txt": "/galileo-front/static/js/2.9050431d.chunk.js.LICENSE.txt",
+    "static/media/katex.min.css": "/galileo-front/static/media/KaTeX_Typewriter-Regular.6cc31ea5.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.e708d8b1.js",
-    "static/css/2.ff0eeaad.chunk.css",
-    "static/js/2.aa971619.chunk.js",
+    "static/css/2.9c2e438b.chunk.css",
+    "static/js/2.9050431d.chunk.js",
     "static/css/main.fab45d46.chunk.css",
-    "static/js/main.682bf8cc.chunk.js"
+    "static/js/main.49ab2771.chunk.js"
   ]
 }
