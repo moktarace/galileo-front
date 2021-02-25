@@ -4,16 +4,13 @@ import {
     HashRouter as Router,
     Switch,
     Route,
+    Link,
 } from "react-router-dom";
-import 'primereact/resources/themes/saga-blue/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
 import "./styles.css";
-import { ProgressSpinner } from 'primereact/progressspinner';
 import LevelPage from "./page/level-page";
 import SkillPage from "./page/skill-page";
 import DatabaseService from "./service/database-service";
+import ExercicePage from "./page/exercice-page";
 
 class AppState {
     constructor(public databaseLoaded: boolean = false) { }
@@ -46,22 +43,32 @@ class App extends React.Component<any, AppState> {
     public render() {
         if (!this.state.databaseLoaded) {
             return (
-                <div className="card"><ProgressSpinner /></div>
+                <div className="uk-container uk-padding uk-container-large">
+                    <div uk-spinner="true"></div>
+                </div>
             );
         }
         return (
             <Router>
-                <div className="p-component">
-                    <div className="p-mr-2">
-                        <Switch>
-                            <Route path="/skill/:id">
-                                <SkillPage database={this.database} />
-                            </Route>
-                            <Route path="/">
-                                <LevelPage database={this.database} />
-                            </Route>
-                        </Switch>
+                <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
+                    <div className="uk-navbar-container" uk-navbar="true">
+                        <div className="uk-navbar-center">
+                            <Link to="/" className="uk-navbar-item uk-logo">Galileo POC</Link>
+                        </div>
                     </div>
+                </div>
+                <div className="uk-container uk-padding uk-container-large">
+                    <Switch>
+                        <Route path="/skill/:id">
+                            <SkillPage database={this.database} />
+                        </Route>
+                        <Route path="/exercice/:id">
+                            <ExercicePage database={this.database} />
+                        </Route>
+                        <Route path="/">
+                            <LevelPage database={this.database} />
+                        </Route>
+                    </Switch>
                 </div>
             </Router>
         );

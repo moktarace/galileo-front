@@ -28,11 +28,8 @@ class LevelPage extends React.Component<LevelPageProp, LevelPageModel> {
 
     public render() {
         return (
-            <div className="card">
-                <h2>POC</h2>
-                <LevelList id="0" description=""
-                    name="Première" subjects={this.state.subjects}></LevelList>
-            </div>
+            <LevelList id="0" description=""
+                name="Première" subjects={this.state.subjects}></LevelList>
         );
     }
 }

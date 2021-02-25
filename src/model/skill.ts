@@ -9,13 +9,15 @@ export class Skill {
     exercices: Exercice[];
     image?: string;
     order?: number;
-    difficulty?: number;
-    video?: string;
+    difficulty: number;
+    video: string;
 
     constructor() {
         this.name = "";
         this.id = "";
         this.description = "";
         this.exercices = [];
+        this.difficulty = 1;
+        this.video = "";
     }
 }

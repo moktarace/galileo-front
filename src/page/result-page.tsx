@@ -1,7 +1,4 @@
 import * as React from "react";
-import LevelList from "../component/level-list";
-import { Subject } from "../model/subject";
-import ServiceAPI from "../service/service-api";
 import { Result } from "../model/result";
 
 class ResultPageModel {

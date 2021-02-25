@@ -25,7 +25,7 @@ class DatabaseService {
         });
     }
 
-    public isCreated(): Promise<Boolean> {
+    public isCreated(): Promise<boolean> {
         return Dexie.exists(DatabaseService.DB_NAME);
     }
 
@@ -42,7 +42,7 @@ class DatabaseService {
             .where({ subject_id: skill.subject_id })
             .filter(s => s.id !== skill.id)
             .limit(3)
-            .toArray();
+            .sortBy('difficulty');
     }
 
     public getSkill(id: number): Promise<Skill> {
@@ -54,7 +54,7 @@ class DatabaseService {
     }
 
 
-    public initialize(): Promise<Boolean> {
+    public initialize(): Promise<boolean> {
         return new Promise((resolve) => {
             this.api.getSubject().then((subjects) => {
                 subjects.forEach(s => {

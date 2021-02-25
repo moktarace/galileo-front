@@ -30,7 +30,7 @@ class ServiceAPI {
                                 name: exo.post_title,
                                 description: "",
                                 enonce: exo.enonce,
-                                questions: exo.enonce.split(regexp) || 1,
+                                questions: exo.enonce.replaceAll('</li>', '').split(regexp) || [],
                                 answer: exo.correction,
                                 tip: "demerde-toi"
                             })
